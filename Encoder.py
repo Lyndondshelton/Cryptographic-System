@@ -116,8 +116,6 @@ def decryption(enc_mat):
             for c in range(len(INV_MATRIX_KEY)):
                 d += enc_mat[i][c] * INV_MATRIX_KEY[c][j]
             DEC[i].append(round(d))
-    #  print("Decrypted matrix= {}".format(DEC))
-    #  print("Y matrix= {}".format(Y))
 
     #
     # For each of the values in DEC, use the caesar_key to find the original values and decrypt the message
