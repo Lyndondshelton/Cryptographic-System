@@ -4,6 +4,7 @@ This cryptographic system uses an encrypted alphabet. The encrypted alphabet is 
 
 Ex 1: 
   Plaintext: 27 18 39 39 48 = “H E L L O”
+  
   Ciphertext:  39 30 51 51 60 = “L I P P S”
 
 The second step in this cryptographic system is to encrypt the ciphertext by using a Matrix cipher. We denote the encryption matrix, the matrix containing the message to be encrypted, as Y, and the cipher key used is a 4x4 matrix called Key. Y * Key will give the encrypted cipher matrix which is called ENC. 
@@ -12,6 +13,7 @@ Initially, the size of Y is unknown and is determined by the length of the ciphe
 
 Ex 2:
 	The string “HELLO” has a length of 5
+	
 	Since 5/4 = 1.25 is a decimal we round up, so the number of rows in Y is 2, and Y is a 2x4 matrix.
 
 In order to decrypt the encrypted message, we use the inverse of the matrix Key:
