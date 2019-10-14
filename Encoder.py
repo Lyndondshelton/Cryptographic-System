@@ -16,8 +16,7 @@ alpha_decrypt = {0: ' ', 3: 'A', 6: 'B', 9: 'C', 12: 'D', 15: 'E', 18: 'F', 21: 
                  102: '1', 105: '2', 108: '3', 111: '4', 114: '5', 117: '6', 120: '7', 123: '8', 126: '9'}
 
 #
-# Initialization of the Matrix encryption and decryption keys. INV_MATRIX_KEY is the inverse of the MATRIX_KEY.
-#  MATRIX_KEY and INV_MATRIX_KEY are final and should not be changed.
+# Initialization of the Matrix encryption key. MATRIX_KEY is final and should not be changed.
 #
 MATRIX_KEY = [
     [2, 3, 6, 7],
@@ -31,11 +30,11 @@ MATRIX_KEY = [
 #
 Y = []  # The encryption matrix that will hold the values of the message
 ENC = []  # The encrypted matrix. ENC = Y * MATRIX_KEY
-DEC = []  # The decrypted matrix. DEC = ENC * INV_MATRIX_KEY
+DEC = []  # The decrypted matrix. DEC = ENC * inv_matrix_key
 
 
 CAESAR_KEY = 12  # The key used for the caesar cipher. CAESAR_KEY is final and should not be changed.
-max_value = alpha_encrypt["-"] + CAESAR_KEY  # The largest possible value of a character in the alphabet
+max_value = alpha_encrypt['9'] + CAESAR_KEY  # The largest possible value of a character in the alphabet
 string = input("Enter a message: ").upper()  # Get the message as input from the user
 
 #
