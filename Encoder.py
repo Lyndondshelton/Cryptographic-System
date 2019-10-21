@@ -33,8 +33,6 @@ ENC = []  # The encrypted matrix. ENC = Y * MATRIX_KEY
 DEC = []  # The decrypted matrix. DEC = ENC * inv_matrix_key
 
 
-CAESAR_KEY = 12  # The key used for the caesar cipher. CAESAR_KEY is final and should not be changed.
-max_value = alpha_encrypt['9'] + CAESAR_KEY  # The largest possible value of a character in the alphabet
 string = input("Enter a message: ").upper()  # Get the message as input from the user
 
 #
@@ -46,6 +44,8 @@ y_rows = math.ceil(len(string) / x_rows)  # The number of rows needed for matrix
 y_cols = x_rows  # The number of columns in matrix Y needs to be equal to the number of rows in MATRIX_KEY
 entries_in_y = y_rows * x_cols  # The number of total entries in matrix Y
 
+CAESAR_KEY = x_rows * (alpha_encrypt['B'] - alpha_encrypt['A'])  # The key used for the caesar cipher. CAESAR_KEY is final and should not be changed.
+max_value = alpha_encrypt['9'] + CAESAR_KEY  # The largest possible value of a character in the alphabet
 
 #
 # Encrypt the message by using the caesar cipher then the encryption matrix Y
