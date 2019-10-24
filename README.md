@@ -1,13 +1,17 @@
 # Cryptographic-System
 
-This cryptographic system uses an encrypted alphabet. The encrypted alphabet is created by using a Caesar cipher on an original alphabet where the letters are represented by numerical values. The Caesar cipher will increase the value of each letter in the alphabet by a certain number, called the **Caesar Key**. By using this method, the plaintext letter *‘A’* may instead be perceived as the ciphertext letter *‘Z’* or *‘F’*. This creates a pre-encrypted message to be entered in the encryption matrix.
+The goal of this project is to create a cryptographic system that can encrypt a message by using a Matrix Cipher. First, the system uses an encrypted alphabet to encrypt the message before it is entered in the Matrix Cipher. The encrypted alphabet is created by using a Caesar cipher on an original alphabet where the letters are represented by numerical values. The Caesar cipher will increase the value of each letter in the alphabet by a certain number, called the **Caesar Key**. By using this method, the plaintext letter *‘A’* may instead be perceived as the ciphertext letter *‘Z’* or *‘F’*. This creates a pre-encrypted message to be entered in the encryption matrix.
 
 **Ex 1:** 
+	
+	We send the message "Hello":
+	
+	cipher key = +12
 	
 	Plaintext: 27 18 39 39 48 = “H E L L O”
 	Ciphertext:  39 30 51 51 60 = “L I P P S”
 
-The second step in this cryptographic system is to encrypt the ciphertext by using a Matrix cipher. We denote the encryption matrix, the matrix containing the message to be encrypted, as **Y**, and the cipher key used is a 4x4 matrix called **Key**. *Y * Key* will give the encrypted cipher matrix which is called **ENC**. The value of the previously defined Caesar Key is determined by *multiplying the number of rows in Key by the difference in values between letters in the alphabet.*
+The second step in this cryptographic system is to encrypt the ciphertext by using a Matrix cipher. We denote the encryption matrix as **Y**, and the cipher key used is a 4x4 matrix called **Key**. *Y * Key* will give the encrypted cipher matrix which is called **ENC**. The value of the previously defined Caesar Key is determined by *multiplying the number of rows in Key by the difference in values between letters in the alphabet.*
 
 **Ex 2:**
 
