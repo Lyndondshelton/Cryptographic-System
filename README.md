@@ -1,6 +1,6 @@
 # Cryptographic-System
 
-This cryptographic system uses an encrypted alphabet. The encrypted alphabet is created by using a Caesar cipher on an original alphabet where the letters are represented by numerical values. The Caesar cipher will increase the value of each letter in the alphabet by a certain number, called the **Caesar Key**. By using this method, the plaintext letter ‘A’ may instead be perceived as the ciphertext letter ‘Z’ or ‘F’. This creates a pre-encrypted message to be entered in the encryption matrix.
+This cryptographic system uses an encrypted alphabet. The encrypted alphabet is created by using a Caesar cipher on an original alphabet where the letters are represented by numerical values. The Caesar cipher will increase the value of each letter in the alphabet by a certain number, called the **Caesar Key**. By using this method, the plaintext letter *‘A’* may instead be perceived as the ciphertext letter *‘Z’* or *‘F’*. This creates a pre-encrypted message to be entered in the encryption matrix.
 
 **Ex 1:** 
 	
