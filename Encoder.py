@@ -1,7 +1,6 @@
 import math
 import numpy as np
 
-
 #
 # Initialization of the encryption and decryption dictionaries. alpha_encrypt will return the value of a letter,
 #  alpha_decrypt will return the letter associated with a value.
@@ -115,9 +114,11 @@ def decryption(enc_mat):
 
 # The following lines will encrypt the string and print the encrypted matrix ENC to the screen, then decrypt ENC and
 #  print the decrypted matrix DEC and the original message to the screen.
-print("The encryption matrix = {}".format(encryption(string)))
+print("\nThe Encrypted Matrix(ENC): {}\n".format(encryption(string)))
+
 message = decryption(ENC)
-print("The decrypted matrix = {}".format(DEC))
-print("The decrypted message = {}".format(message))
+print("The Decrypted Matrix(DEC): {}".format(DEC))
+
+print("The decrypted message: {}".format(message))
 
 
