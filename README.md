@@ -1,26 +1,28 @@
 # Cryptographic-System
 
-The goal of this project is to create a cryptographic system that can encrypt a message by using a Matrix Cipher. First, the system uses an encrypted alphabet to encrypt the message before it is entered in the Matrix Cipher. The encrypted alphabet is created by using a Caesar cipher on an original alphabet where the letters are represented by numerical values. The Caesar cipher will increase the value of each letter in the alphabet by a certain number, called the **Caesar Key**. By using this method, the plaintext letter *‘A’* may instead be perceived as the ciphertext letter *‘Z’* or *‘F’*. This creates a pre-encrypted message to be entered in the encryption matrix.
+The goal of this project is to create a cryptographic system that can encrypt a message by using a Matrix Cipher. First, the system uses an encrypted alphabet to encrypt the message before it is entered in the Matrix Cipher. The *"encrypted alphabet"* is created by using a Caesar cipher on a *"plaintext alphabet"* where the letters are represented by numerical values. The Caesar cipher will increase the value of each letter in the alphabet by a certain number; this number is called the **Caesar Key**. By using this method, the plaintext letter *‘A’* may instead be perceived as the ciphertext letter *‘Z’* or *‘F’*. This creates a pre-encrypted message to be entered in the **encryption matrix**.
 
 **Ex 1:** 
 	
 	We send the message "Hello":
 	
-	cipher key = +12
+	cipher key = 12
 	
 	Plaintext: 27 18 39 39 48 = “H E L L O”
 	Ciphertext:  39 30 51 51 60 = “L I P P S”
 
-The second step in this cryptographic system is to encrypt the ciphertext by using a Matrix cipher. We denote the encryption matrix as **Y**, and the cipher key used is a 4x4 matrix called **Key**. *Y * Key* will give the encrypted cipher matrix which is called **ENC**. The value of the previously defined Caesar Key is determined by *multiplying the number of rows in Key by the difference in values between letters in the alphabet.*
+The Encryption Matrix will contain the values of the letters in the ciphertext message. We denote the encryption matrix as **Y**, and the matrix cipher key used is a 4x4 matrix called **Key**. *Y * Key* will give the desired Encrypted Matrix which is called **ENC**. The value of the previously defined Caesar Key is determined by *multiplying the number of rows in **Key** by the difference in values between letters in the alphabet.*
 
 **Ex 2:**
+	
+	Caesar key is initially unknown. Choose two adjacent letters in the alphabet:
 
-	Value of ‘A’= a= 5 
-	Value of ‘B’= b= 7
+	a = Value of ‘A’= 5 
+	b = Value of ‘B’= 7
 	Caesar Key = (number of rows in KEY) * (b – a) = 4 * (7 – 5) = 8 
 
 
-Initially, the size of Y is unknown and is determined by the length of the cipher text and the dimensions of Key. Since, *Y * Key = ENC*, the number of columns in Y must be equal to the number of rows in Key. The number of rows of the matrix Y is determined by the length of the ciphertext divided by the rows in the matrix Key. If the result of this division is a decimal, then ***always round up***.
+Initially, the size of Y is unknown and is determined by *the length of the cipher text and the dimensions of Key*. Since, *Y * Key = ENC*, the number of columns in Y must be equal to the number of rows in Key. The number of rows of the matrix Y is determined by the length of the ciphertext divided by the rows in the matrix Key. If the result of this division is a decimal, then ***always round up***.
 
 
 **Ex 3:**
@@ -32,4 +34,4 @@ In order to decrypt the encrypted message, we use the inverse of the matrix Key:
 
 	ENC * Inv_Key = DEC
 
-Then convert the numeric values in DEC to obtain the ciphertext message and use the Caesar cipher key to decrypt the message.
+Then convert the numeric values in DEC by using the Encrypted Alphabet to obtain the ciphertext message, then use the Caesar Key to decrypt the message.
